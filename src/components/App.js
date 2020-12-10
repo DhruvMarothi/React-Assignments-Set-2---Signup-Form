@@ -29,7 +29,7 @@ class App extends React.Component {
       gender: "Male",
       phoneNumber: "",
       password: "",
-      error: "Hello zen"
+      error: ""
     };
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);

@@ -10,7 +10,7 @@ function nameCheck(s) {
 
 function welcomeMsg(s) {
   let ans = "";
-  for (let i = 0; i < s.length(); i++) {
+  for (let i = 0; i < s.length; i++) {
     if (s[i] !== "@") {
       ans = ans + s[i];
     } else {
@@ -94,7 +94,7 @@ class App extends React.Component {
     } else if (this.state.password.length <= 6) {
       this.setState({ error: "Password must contain atleast 6 letters" });
     } else {
-      this.setState({ error: "Hello Dhruv" });
+      this.setState({ error: welcomeMsg(this.state.email) });
     }
     event.preventDefault();
   }

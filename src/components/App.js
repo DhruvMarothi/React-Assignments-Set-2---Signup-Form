@@ -14,7 +14,7 @@ function welcomeMsg(s) {
     if (s[i] !== "@") {
       ans = ans + s[i];
     } else {
-      ans = "hello" + ans;
+      ans = "Hello" + ans;
       return ans;
     }
   }
@@ -26,7 +26,7 @@ class App extends React.Component {
     this.state = {
       name: "",
       email: " ",
-      gender: "Male",
+      gender: "male",
       phoneNumber: "",
       password: "",
       error: ""
@@ -83,9 +83,9 @@ class App extends React.Component {
       this.setState({ error: "Email must contain @" });
     } else if (
       !(
-        this.state.gender === "Male" ||
-        this.state.gender === "Female" ||
-        this.state.gender === "others"
+        this.state.gender === "male" ||
+        this.state.gender === "female" ||
+        this.state.gender === "other"
       )
     ) {
       this.setState({ error: "Please identify as male, female or others" });
@@ -130,9 +130,9 @@ class App extends React.Component {
               value={this.state.gender}
               onChange={this.handleGenderChange}
             >
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="others">Others</option>
+              <option value="male">male</option>
+              <option value="female">female</option>
+              <option value="other">other</option>
             </select>
           </label>
           <br />
